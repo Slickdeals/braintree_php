@@ -35,6 +35,7 @@ class PaymentMethodTest extends Setup
                 'verificationAmount',
             ]],
             ['billingAddress' => Braintree\AddressGateway::createSignature()],
+            ['riskData' => ['customerBrowser', 'customerIp']],
             'customerId'
         ];
         $this->assertEquals($expected, Braintree\PaymentMethodGateway::createSignature());

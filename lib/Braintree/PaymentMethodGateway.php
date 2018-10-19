@@ -143,7 +143,8 @@ class PaymentMethodGateway
             'paymentMethodNonce',
             'token',
             ['options' => $optionsSignature],
-            ['billingAddress' => $billingAddressSignature]
+            ['billingAddress' => $billingAddressSignature],
+            ['riskData' => ['customerBrowser', 'customerIp']],
         ];
     }
 
